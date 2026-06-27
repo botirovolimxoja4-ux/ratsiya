@@ -14,113 +14,125 @@
 <title>Mobil Ratsiya</title>
 <style>
 :root{--bg:#0d1015;--panel:#151b23;--panel2:#1b232d;--line:#28323e;--txt:#e8edf4;
---muted:#8a97a8;--amber:#ffab2e;--amber2:#ff8a00;--green:#34e0a4;--green2:#16b582;--red:#ff5d5d;}
+--muted:#9aa7b8;--amber:#ffab2e;--amber2:#ff8a00;--green:#34e0a4;--green2:#16b582;--red:#ff5252;}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%}
-body{font-family:'Space Grotesk',system-ui,sans-serif;color:var(--txt);
+body{font-family:'Space Grotesk',system-ui,sans-serif;color:var(--txt);font-size:17px;
 background:radial-gradient(1200px 600px at 50% -10%,#1a2330,transparent 60%),var(--bg);
 display:flex;justify-content:center}
 .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
-.frame{width:100%;max-width:460px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;
+.frame{width:100%;max-width:480px;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;
 border-left:1px solid var(--line);border-right:1px solid var(--line);background:linear-gradient(180deg,#10151c,#0d1015);position:relative}
 .spin{animation:sp 1s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
 .hide{display:none!important}
 
-.ob{flex:1;display:flex;flex-direction:column;justify-content:center;padding:28px 22px;gap:20px}
-.badge{display:flex;align-items:center;gap:12px}
-.badge .dot{width:46px;height:46px;border-radius:13px;background:linear-gradient(145deg,var(--amber),var(--amber2));display:grid;place-items:center;box-shadow:0 8px 24px rgba(255,138,0,.35);font-size:24px}
-.ob h1{font-size:28px;line-height:1.05;letter-spacing:-.02em;margin:0;font-weight:700}
-.ob .sub{color:var(--muted);font-size:14px;margin-top:6px;line-height:1.45}
-label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.phone-in{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden}
-.phone-in .pre{padding:15px 6px 15px 16px;color:var(--muted);font-size:16px}
-.phone-in input{flex:1;background:none;border:none;color:var(--txt);padding:15px 16px 15px 4px;font-size:16px;outline:none;width:100%}
-input.t{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:13px;padding:15px 16px;font-size:16px;outline:none}
+/* REGISTER */
+.ob{flex:1;display:flex;flex-direction:column;justify-content:center;padding:30px 24px;gap:22px}
+.badge{display:flex;align-items:center;gap:14px}
+.badge .dot{width:54px;height:54px;border-radius:15px;background:linear-gradient(145deg,var(--amber),var(--amber2));display:grid;place-items:center;box-shadow:0 8px 24px rgba(255,138,0,.35);font-size:28px}
+.ob h1{font-size:32px;line-height:1.05;letter-spacing:-.02em;margin:0;font-weight:700}
+.ob .sub{color:var(--muted);font-size:15px;margin-top:7px;line-height:1.45}
+label{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;font-weight:600}
+.phone-in{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.phone-in .pre{padding:17px 6px 17px 18px;color:var(--muted);font-size:18px}
+.phone-in input{flex:1;background:none;border:none;color:var(--txt);padding:17px 16px 17px 4px;font-size:18px;outline:none;width:100%}
+input.t{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:14px;padding:17px 18px;font-size:18px;outline:none}
 input:focus,.phone-in:focus-within{border-color:var(--amber)}
-.btn{width:100%;border:none;border-radius:14px;padding:16px;font-size:16px;font-weight:600;background:linear-gradient(145deg,var(--amber),var(--amber2));color:#1a1003;cursor:pointer;box-shadow:0 10px 26px rgba(255,138,0,.3)}
+.btn{width:100%;border:none;border-radius:15px;padding:18px;font-size:18px;font-weight:700;background:linear-gradient(145deg,var(--amber),var(--amber2));color:#1a1003;cursor:pointer;box-shadow:0 10px 26px rgba(255,138,0,.3)}
 .btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}
-.note{font-size:12px;color:var(--muted);line-height:1.55;border-top:1px solid var(--line);padding-top:16px}
+.note{font-size:14px;color:var(--muted);line-height:1.6;border-top:1px solid var(--line);padding-top:18px}
 
-.hd{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(13,16,21,.72);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
-.hd .left{display:flex;align-items:center;gap:11px}
-.av{border-radius:12px;display:grid;place-items:center;font-weight:700;color:#10151c;flex-shrink:0}
-.me-av{width:40px;height:40px}
-.hd .nm{font-size:15px;font-weight:600;line-height:1.1}
-.hd .ph{font-size:12px;color:var(--muted)}
-.ico{background:var(--panel);border:1px solid var(--line);color:var(--muted);width:38px;height:38px;border-radius:11px;display:grid;place-items:center;cursor:pointer;font-size:0}
-.ico:hover{color:var(--txt);border-color:var(--amber)}
-.ico.danger{color:var(--red);border-color:rgba(255,93,93,.4)}
-.ico svg{width:18px;height:18px}
+/* HEADER */
+.hd{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-bottom:1px solid var(--line);background:rgba(13,16,21,.72);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
+.hd .left{display:flex;align-items:center;gap:12px;min-width:0}
+.av{border-radius:13px;display:grid;place-items:center;font-weight:700;color:#10151c;flex-shrink:0}
+.me-av{width:46px;height:46px;font-size:18px}
+.hd .nm{font-size:18px;font-weight:700;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hd .ph{font-size:14px;color:var(--muted)}
+.ico{background:var(--panel);border:1px solid var(--line);color:var(--muted);width:46px;height:46px;border-radius:13px;display:grid;place-items:center;cursor:pointer;font-size:0;flex-shrink:0}
+.ico:active{background:var(--panel2)}
+.ico svg{width:24px;height:24px}
 
+/* HOME */
 .body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px}
-.add-bar{display:flex;gap:8px}
+.ongoing{display:flex;align-items:center;gap:10px;background:rgba(52,224,164,.12);border:1px solid var(--green);
+  border-radius:14px;padding:14px 16px;cursor:pointer;font-size:16px;font-weight:600;color:var(--green)}
+.ongoing .gp{margin-left:auto;font-size:14px;color:var(--green);display:flex;align-items:center;gap:6px}
+.add-bar{display:flex;gap:10px}
 .add-bar .phone-in{flex:1}
-.add-bar .add{background:var(--green2);border:none;color:#06231a;border-radius:13px;width:50px;display:grid;place-items:center;cursor:pointer}
+.add-bar .add{background:var(--green2);border:none;color:#06231a;border-radius:14px;width:58px;display:grid;place-items:center;cursor:pointer;font-size:30px;font-weight:700}
 .add-bar .add:disabled{opacity:.4}
-.sect-h{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.sect-h .r{margin-left:auto;text-transform:none;letter-spacing:0}
-.tg{font-size:12px;color:var(--amber);background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0}
-.contact{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:11px 12px;cursor:pointer}
+.sect-h{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);font-weight:600;margin-top:4px}
+.grp-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.grp-head{display:flex;align-items:center;gap:12px;padding:15px 16px;cursor:pointer;font-size:17px;font-weight:700}
+.grp-head .gi{width:42px;height:42px;border-radius:12px;background:rgba(255,171,46,.15);display:grid;place-items:center;font-size:22px}
+.grp-head .chev{margin-left:auto;color:var(--muted);font-size:20px}
+.grp-open{padding:0 16px 16px;display:flex;flex-direction:column;gap:12px}
+.grp-hint{font-size:14px;color:var(--muted);line-height:1.5}
+.grp-name{width:100%;background:var(--panel2);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:14px 15px;font-size:16px;outline:none}
+.grp-start{width:100%;border:none;border-radius:14px;padding:16px;font-size:17px;font-weight:700;background:linear-gradient(145deg,var(--amber),var(--amber2));color:#1a1003;cursor:pointer}
+.grp-start:disabled{opacity:.4}
+
+.contact{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:13px 14px;cursor:pointer}
 .contact.sel{border-color:var(--green);background:rgba(52,224,164,.08)}
-.contact .cav{width:42px;height:42px;position:relative}
-.contact .cn{font-size:15px;font-weight:600}
-.contact .cp{font-size:12px;color:var(--muted)}
+.contact .cav{width:50px;height:50px;font-size:19px;position:relative}
+.contact .cn{font-size:18px;font-weight:700}
+.contact .cp{font-size:14px;color:var(--muted);margin-top:1px}
 .contact .info{flex:1;min-width:0}
-.cbtn{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);background:none;cursor:pointer}
-.cbtn.sm{width:34px;height:34px;color:var(--muted)}
-.pick{width:26px;height:26px;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;color:#06231a}
-.empty{color:var(--muted);font-size:13px;text-align:center;line-height:1.6;padding:22px;border:1px dashed var(--line);border-radius:14px}
-.gbar{display:flex;gap:8px;align-items:center}
-.gbar input{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:12px 14px;font-size:14px;outline:none}
-.gbar .go{background:linear-gradient(145deg,var(--amber),var(--amber2));border:none;color:#1a1003;border-radius:12px;padding:0 16px;height:44px;font-weight:600;cursor:pointer;white-space:nowrap}
-.gbar .go:disabled{opacity:.4}
-.banner{font-size:12px;line-height:1.55;border-radius:12px;padding:11px 13px;display:flex;gap:9px;align-items:flex-start}
+.cbtn{width:50px;height:50px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);background:none;cursor:pointer;font-size:24px}
+.cbtn.sm{width:42px;height:42px;color:var(--muted);font-size:18px}
+.pick{width:32px;height:32px;border-radius:9px;border:2px solid var(--line);display:grid;place-items:center;color:#06231a;font-size:20px;font-weight:700}
+.empty{color:var(--muted);font-size:15px;text-align:center;line-height:1.6;padding:24px;border:1px dashed var(--line);border-radius:16px}
+.banner{font-size:14px;line-height:1.6;border-radius:13px;padding:13px 15px;display:flex;gap:10px;align-items:flex-start}
 .banner.warn{background:rgba(255,171,46,.1);border:1px solid rgba(255,171,46,.35);color:#ffce8a}
 .banner.info{background:rgba(90,169,255,.08);border:1px solid rgba(90,169,255,.3);color:#bcd9ff}
 
-.incoming{position:fixed;left:0;right:0;top:0;display:flex;justify-content:center;z-index:30;padding:10px}
-.inc{width:100%;max-width:440px;background:var(--panel2);border:1px solid var(--green);border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;box-shadow:0 14px 40px rgba(0,0,0,.5)}
-.inc .ia{width:44px;height:44px}
+/* INCOMING */
+.incoming{position:fixed;left:0;right:0;top:0;display:flex;justify-content:center;z-index:30;padding:12px}
+.inc{width:100%;max-width:456px;background:var(--panel2);border:1px solid var(--green);border-radius:18px;padding:16px;display:flex;align-items:center;gap:14px;box-shadow:0 16px 44px rgba(0,0,0,.55);animation:pop .25s ease}
+@keyframes pop{from{transform:translateY(-12px);opacity:0}to{transform:translateY(0);opacity:1}}
+.inc .ia{width:54px;height:54px;font-size:22px;animation:wob 1s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
 .inc .it{flex:1;min-width:0}
-.inc .it .t{font-size:15px;font-weight:600}
-.inc .it .s{font-size:12px;color:var(--muted)}
-.inc button{border:none;border-radius:11px;width:42px;height:42px;display:grid;place-items:center;cursor:pointer}
+.inc .it .t{font-size:18px;font-weight:700}
+.inc .it .s{font-size:14px;color:var(--muted)}
+.inc button{border:none;border-radius:14px;width:54px;height:54px;display:grid;place-items:center;cursor:pointer;font-size:24px}
 .inc .acc{background:var(--green);color:#06231a}
-.inc .dec{background:rgba(255,93,93,.15);color:var(--red);border:1px solid rgba(255,93,93,.4)}
+.inc .dec{background:rgba(255,82,82,.16);color:var(--red);border:1px solid rgba(255,82,82,.45)}
 
-.stage{flex:1;display:flex;flex-direction:column;align-items:center;gap:18px;padding:22px;overflow-y:auto}
-.pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;padding:7px 13px;border-radius:20px;border:1px solid var(--line);background:var(--panel);color:var(--muted)}
+/* ROOM */
+.stage{flex:1;display:flex;flex-direction:column;align-items:center;gap:20px;padding:24px;overflow-y:auto}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:15px;padding:9px 16px;border-radius:22px;border:1px solid var(--line);background:var(--panel);color:var(--muted)}
 .pill.on{color:var(--green);border-color:rgba(52,224,164,.4);background:rgba(52,224,164,.08)}
 .pill.wait{color:var(--amber);border-color:rgba(255,171,46,.4);background:rgba(255,171,46,.08)}
-.grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;width:100%}
-.peerc{display:flex;flex-direction:column;align-items:center;gap:9px;width:120px}
-.orb{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 40%,var(--panel2),var(--panel));border:1px solid var(--line)}
-.orb .ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid transparent}
+.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;width:100%}
+.peerc{display:flex;flex-direction:column;align-items:center;gap:10px;width:130px}
+.orb{width:108px;height:108px;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 40%,var(--panel2),var(--panel));border:1px solid var(--line)}
+.orb .ring{position:absolute;inset:-6px;border-radius:50%;border:2px solid transparent}
 .orb.live .ring{border-color:rgba(52,224,164,.4);animation:ring 1.8s ease-out infinite}
 .orb.sp .ring{border-color:var(--green);animation:ring 1s ease-out infinite}
 @keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.28);opacity:0}}
-.orb .oav{width:64px;height:64px;font-size:22px}
-.peerc .pn{font-size:14px;font-weight:600;text-align:center;line-height:1.15;word-break:break-word}
-.peerc .ps{font-size:11px;color:var(--muted)}
+.orb .oav{width:72px;height:72px;font-size:26px}
+.peerc .pn{font-size:16px;font-weight:700;text-align:center;line-height:1.15;word-break:break-word}
+.peerc .ps{font-size:13px;color:var(--muted)}
 .peerc .ps.sp{color:var(--green)}
 
-.dock{border-top:1px solid var(--line);padding:16px 18px calc(18px + env(safe-area-inset-bottom));background:rgba(13,16,21,.92);backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:14px}
-.modes{display:flex;gap:8px}
-.mode{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;padding:10px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer}
-.mode.on{border-color:var(--amber);background:rgba(255,171,46,.12);color:var(--amber)}
-.ptt{height:110px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,var(--panel2),var(--panel));color:var(--txt);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:18px;font-weight:700;cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:none;position:relative;overflow:hidden}
-.ptt:disabled{opacity:.45}
-.ptt .glow{position:absolute;inset:0;opacity:0;transition:opacity .15s;background:radial-gradient(circle at 50% 50%,rgba(255,171,46,.45),transparent 70%)}
-.ptt.tx{border-color:var(--amber);color:#1a1003;background:linear-gradient(180deg,var(--amber),var(--amber2))}
-.ptt.tx .glow{opacity:1}
-.ptt.open{height:60px;flex-direction:row;font-size:16px;cursor:default}
-.hint{font-size:12px;color:var(--muted);text-align:center;line-height:1.5}
-.barz{display:flex;gap:4px;align-items:flex-end;height:24px}
-.barz i{width:4px;background:#1a1003;border-radius:2px}
+.dock{border-top:1px solid var(--line);padding:16px 16px calc(18px + env(safe-area-inset-bottom));background:rgba(13,16,21,.94);backdrop-filter:blur(10px);display:flex;flex-direction:column;gap:14px}
+.spk-row{display:flex;gap:10px}
+.spk{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:600;padding:15px 8px;border-radius:14px;border:1px solid var(--line);background:var(--panel);color:var(--muted);cursor:pointer}
+.spk.on{border-color:var(--amber);background:rgba(255,171,46,.14);color:var(--amber)}
+.spk.mute{flex:0 0 64px}
+.spk.mute.act{border-color:var(--red);background:rgba(255,82,82,.14);color:var(--red)}
+.endbig{width:100%;border:none;border-radius:16px;padding:20px;font-size:19px;font-weight:700;
+  background:linear-gradient(145deg,#ff5252,#e23838);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+  box-shadow:0 10px 26px rgba(255,82,82,.3)}
+.endbig:active{transform:scale(.99)}
+.hint{font-size:14px;color:var(--muted);text-align:center;line-height:1.5}
 
-.installbar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:10px;z-index:25}
-.installbar .ib{width:100%;max-width:440px;background:var(--panel2);border:1px solid var(--amber);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px;font-size:13px}
-.installbar button{margin-left:auto;background:var(--amber);border:none;color:#1a1003;border-radius:10px;padding:8px 12px;font-weight:600;cursor:pointer}
+/* INSTALL */
+.installbar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:12px;z-index:25}
+.installbar .ib{width:100%;max-width:456px;background:var(--panel2);border:1px solid var(--amber);border-radius:15px;padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:15px}
+.installbar button{margin-left:auto;background:var(--amber);border:none;color:#1a1003;border-radius:11px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:15px}
 </style>
 </head>
 <body>
@@ -129,15 +141,15 @@ input:focus,.phone-in:focus-within{border-color:var(--amber)}
   <!-- REGISTER -->
   <section id="reg" class="ob">
     <div class="badge"><div class="dot">📻</div>
-      <div><h1>Mobil Ratsiya</h1><div class="sub">Raqamingiz bilan ro'yxatdan o'ting. Bos-va-gapir, jonli ovoz.</div></div></div>
-    <div><label>Telefon raqamingiz (niki)</label>
+      <div><h1>Mobil Ratsiya</h1><div class="sub">Raqamingiz bilan ro'yxatdan o'ting va jonli gaplashing.</div></div></div>
+    <div><label>Telefon raqamingiz</label>
       <div class="phone-in"><span class="pre mono">+998</span>
         <input id="regPhone" class="mono" inputmode="numeric" placeholder="90 123 45 67"></div></div>
     <div><label>Ismingiz</label><input id="regName" class="t" maxlength="20" placeholder="Masalan: Ota"></div>
-    <button id="regBtn" class="btn" disabled>Ro'yxatdan o'tish</button>
+    <button id="regBtn" class="btn" disabled>Kirish</button>
     <div id="regErr" class="banner warn hide"></div>
-    <div class="note">Raqamingiz boshqalar uchun nikingiz bo'ladi. Sinash uchun ilovani 2&nbsp;ta telefonda oching,
-      har biriga boshqa raqam kiriting, bir-biringizni kontakt qilib qo'shing va chaqiring.</div>
+    <div class="note">Sinash uchun ilovani 2&nbsp;ta telefonda oching, har biriga boshqa raqam kiriting,
+      bir-biringizni kontakt qilib qo'shing va chaqiring.</div>
   </section>
 
   <!-- HOME -->
@@ -147,6 +159,9 @@ input:focus,.phone-in:focus-within{border-color:var(--amber)}
     <div id="connState" class="ico" title="holat"></div>
   </header>
   <main id="home" class="body hide">
+    <div id="ongoingBar" class="ongoing hide">🟢 Suhbat davom etmoqda
+      <span class="gp">Qaytish ›</span></div>
+
     <div class="add-bar">
       <div class="phone-in"><span class="pre mono">+998</span>
         <input id="addNum" class="mono" inputmode="numeric" placeholder="kontakt raqami"></div>
@@ -154,23 +169,27 @@ input:focus,.phone-in:focus-within{border-color:var(--amber)}
     </div>
     <div id="addErr" class="banner info hide"></div>
 
-    <div class="sect-h">Kontaktlar
-      <span class="r"><button id="groupToggle" class="tg">＋ Guruh suhbati</button></span></div>
-    <div id="gbar" class="gbar hide">
-      <input id="groupName" placeholder="Guruh nomi (ixtiyoriy)">
-      <button id="groupStart" class="go" disabled>Boshlash (0)</button>
+    <!-- group -->
+    <div class="grp-card">
+      <div id="grpHead" class="grp-head"><span class="gi">👥</span> Guruh chaqiruvi yaratish
+        <span class="chev" id="grpChev">＋</span></div>
+      <div id="grpOpen" class="grp-open hide">
+        <div class="grp-hint">Pastdagi kontaktlardan kerakligini belgilang, so'ng «Boshlash»ni bosing. Hamma bir vaqtda gaplashadi.</div>
+        <input id="groupName" class="grp-name" placeholder="Guruh nomi (masalan: Ishxona)">
+        <button id="groupStart" class="grp-start" disabled>Boshlash (0)</button>
+      </div>
     </div>
-    <div id="contacts" style="display:flex;flex-direction:column;gap:9px"></div>
 
-    <div class="banner warn">Suhbatdosh chaqiruvni eshitishi uchun shu ilovani <b>ochiq</b> tutishi kerak.
-      Yopiq ilovani uyg'otish (push-bildirishnoma) keyingi, kengaytirilgan bosqichda qo'shiladi.</div>
+    <div class="sect-h" id="cListHead">📇 Kontaktlar</div>
+    <div id="contacts" style="display:flex;flex-direction:column;gap:11px"></div>
   </main>
 
   <!-- ROOM -->
   <header id="roomHd" class="hd hide">
-    <div class="left"><span id="roomIco" class="ico" style="border-color:#ff8a00;color:#ffab2e"></span>
+    <button id="backBtn" class="ico" title="Orqaga"></button>
+    <div class="left" style="flex:1;justify-content:center;text-align:center">
       <div><div id="roomTitle" class="nm"></div><div id="roomSub" class="ph"></div></div></div>
-    <button id="leaveBtn" class="ico danger" title="Tugatish"></button>
+    <div class="ico" style="visibility:hidden">.</div>
   </header>
   <section id="room" class="stage hide">
     <div id="roomPill" class="pill wait"></div>
@@ -178,11 +197,12 @@ input:focus,.phone-in:focus-within{border-color:var(--amber)}
   </section>
   <div id="dock" class="dock hide">
     <div id="micErr" class="banner warn hide"></div>
-    <div class="modes">
-      <div id="modePtt" class="mode on">✋ Bos-va-gapir</div>
-      <div id="modeOpen" class="mode">🎧 Ochiq liniya</div>
+    <div class="spk-row">
+      <button id="spkSpeaker" class="spk on">🔊 Baland ovoz</button>
+      <button id="spkEar" class="spk">👂 Quloqqa</button>
+      <button id="muteBtn" class="spk mute" title="Mikrofon">🎙️</button>
     </div>
-    <button id="pttBtn" class="ptt" disabled><span class="glow"></span><span id="pttLabel">🎙️ Bosib turib gapiring</span></button>
+    <button id="endBig" class="endbig">📵 Suhbatni tugatish</button>
     <div id="hint" class="hint"></div>
   </div>
 
@@ -194,8 +214,6 @@ input:focus,.phone-in:focus-within{border-color:var(--amber)}
   </div>
 </div>
 
-<audio id="audioPool" class="hide"></audio>
-
 <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 <script>
 "use strict";
@@ -203,14 +221,9 @@ const $ = (id) => document.getElementById(id);
 const palette = ["#ffab2e","#34e0a4","#5aa9ff","#ff5d5d","#c084fc","#22d3ee","#f472b6","#fbbf24"];
 const colorFor = (s="x") => palette[(s.charCodeAt(0)+s.charCodeAt(s.length-1)) % palette.length];
 const initials = (n="?") => (n.trim()[0]||"?").toUpperCase() + (n.trim()[1]||"").toUpperCase();
-const disp = (digits) => "+" + digits; // digits already include 998...
-const beep = (up=true)=>{try{const C=window.AudioContext||window.webkitAudioContext;const c=new C();
-  const o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.type="sine";
-  o.frequency.value=up?880:600;g.gain.setValueAtTime(.0001,c.currentTime);
-  g.gain.exponentialRampToValueAtTime(.15,c.currentTime+.01);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.12);
-  o.start();o.stop(c.currentTime+.13);o.onended=()=>c.close();}catch(e){}};
+const disp = (digits) => "+" + digits;
+const escapeHtml = (s)=> s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
 
-// ICE: free STUN (Google) + free TURN (Open Relay) for tricky networks
 const ICE = { iceServers: [
   { urls: "stun:stun.l.google.com:19302" },
   { urls: "stun:stun1.l.google.com:19302" },
@@ -218,333 +231,302 @@ const ICE = { iceServers: [
   { urls: "turn:openrelay.metered.ca:443", username: "openrelayproject", credential: "openrelayproject" }
 ]};
 
-let me = null;                  // {digits, name}
-let contacts = [];              // [{digits, name}]
-let peer = null;                // PeerJS
-let localStream = null;
-const calls = new Map();        // peerDigits -> { mc, stream, name, audioEl, analyser }
-let room = null;                // { kind:'dm'|'grp', id, title, members:Set }
-let mode = "ptt";               // ptt | open
-let tx = false;
-let pendingIncoming = null;     // single incoming prompt
+// ---------- audio / ring ----------
+let AC=null;
+function ac(){ const C=window.AudioContext||window.webkitAudioContext;
+  if(!AC) AC=new C(); if(AC.state==="suspended") AC.resume(); return AC; }
+function tone(freq,dur,when,vol){ const c=ac(); const o=c.createOscillator(),g=c.createGain();
+  o.connect(g);g.connect(c.destination);o.type="sine";o.frequency.value=freq;
+  g.gain.setValueAtTime(.0001,when);g.gain.exponentialRampToValueAtTime(vol||.2,when+.02);
+  g.gain.exponentialRampToValueAtTime(.0001,when+dur);o.start(when);o.stop(when+dur+.03); }
+let ringTimer=null, vibTimer=null;
+function startIncomingRing(){ stopRing();
+  const play=()=>{ const t=ac().currentTime; tone(988,.18,t,.25); tone(1319,.18,t+.22,.25); tone(1175,.32,t+.5,.25); };
+  play(); ringTimer=setInterval(play,1500);
+  if(navigator.vibrate){ const v=()=>navigator.vibrate([450,200,450]); v(); vibTimer=setInterval(v,1500); } }
+function startOutgoingRing(){ stopRing();
+  const play=()=>{ const t=ac().currentTime; tone(440,.5,t,.13); tone(440,.5,t+.7,.13); };
+  play(); ringTimer=setInterval(play,2600); }
+function stopRing(){ if(ringTimer)clearInterval(ringTimer); ringTimer=null;
+  if(vibTimer)clearInterval(vibTimer); vibTimer=null; if(navigator.vibrate)navigator.vibrate(0); }
+// unlock audio on first interaction
+window.addEventListener("pointerdown", ()=>{ try{ac();}catch(e){} }, {once:true});
 
-// ---------- storage ----------
-const load = () => { try{ me = JSON.parse(localStorage.getItem("rt_me")||"null");
-  contacts = JSON.parse(localStorage.getItem("rt_contacts")||"[]"); }catch(e){ me=null; contacts=[]; } };
-const saveMe = () => localStorage.setItem("rt_me", JSON.stringify(me));
-const saveContacts = () => localStorage.setItem("rt_contacts", JSON.stringify(contacts));
+// ---------- state ----------
+let me=null, contacts=[], peer=null, localStream=null;
+const calls=new Map();           // digits -> {mc,stream,name,audioEl,analyser,speaking}
+let room=null;                   // {kind,id,title,members:Set}
+let spkMode="speaker";           // speaker | ear
+let muted=false;
+let pendingIncoming=null;
+let dialTimer=null, dialTarget=null, dialStart=0;
 
-// ---------- screens ----------
+const load=()=>{ try{ me=JSON.parse(localStorage.getItem("rt_me")||"null");
+  contacts=JSON.parse(localStorage.getItem("rt_contacts")||"[]"); }catch(e){ me=null; contacts=[]; } };
+const saveMe=()=>localStorage.setItem("rt_me",JSON.stringify(me));
+const saveContacts=()=>localStorage.setItem("rt_contacts",JSON.stringify(contacts));
+
 function show(scr){
-  const home = scr==="home", reg = scr==="register", rm = scr==="room";
-  $("reg").classList.toggle("hide", !reg);
-  $("homeHd").classList.toggle("hide", !home); $("home").classList.toggle("hide", !home);
-  $("roomHd").classList.toggle("hide", !rm); $("room").classList.toggle("hide", !rm); $("dock").classList.toggle("hide", !rm);
+  const reg=scr==="register",home=scr==="home",rm=scr==="room";
+  $("reg").classList.toggle("hide",!reg);
+  $("homeHd").classList.toggle("hide",!home); $("home").classList.toggle("hide",!home);
+  $("roomHd").classList.toggle("hide",!rm); $("room").classList.toggle("hide",!rm); $("dock").classList.toggle("hide",!rm);
 }
 
 // ---------- registration ----------
-$("regPhone").addEventListener("input", e=>{ e.target.value=e.target.value.replace(/\D/g,"").slice(0,9); checkReg(); });
-$("regName").addEventListener("input", checkReg);
-function checkReg(){ $("regBtn").disabled = !($("regPhone").value.length>=9 && $("regName").value.trim()); }
-$("regBtn").addEventListener("click", ()=>{
-  const digits = "998" + $("regPhone").value;
-  me = { digits, name: $("regName").value.trim() }; saveMe();
-  initPeer(); renderHome(); show("home");
-});
+$("regPhone").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,9);chkReg();});
+$("regName").addEventListener("input",chkReg);
+function chkReg(){ $("regBtn").disabled=!($("regPhone").value.length>=9 && $("regName").value.trim()); }
+$("regBtn").addEventListener("click",()=>{ try{ac();}catch(e){}
+  me={digits:"998"+$("regPhone").value,name:$("regName").value.trim()}; saveMe();
+  initPeer(); renderHome(); show("home"); });
 
 // ---------- PeerJS ----------
 function initPeer(){
-  if (peer) { try{peer.destroy();}catch(e){} }
-  peer = new Peer(me.digits, { config: ICE, debug: 1 });
-  peer.on("open", ()=> setConn(true));
-  peer.on("disconnected", ()=>{ setConn(false); try{peer.reconnect();}catch(e){} });
-  peer.on("error", (err)=>{
-    if (err.type === "unavailable-id") {
-      alert("Bu raqam allaqachon boshqa qurilmada ochiq. Boshqa raqam ishlating yoki o'sha oynani yoping.");
-    } else if (err.type === "peer-unavailable") {
-      // target offline — mark any waiting call
-      flashRoom("Suhbatdosh hozir oflayn yoki ilovani ochmagan.");
-    }
-    console.warn("peer error", err.type, err);
+  if(peer){try{peer.destroy();}catch(e){}}
+  peer=new Peer(me.digits,{config:ICE,debug:1});
+  peer.on("open",()=>setConn(true));
+  peer.on("disconnected",()=>{setConn(false);try{peer.reconnect();}catch(e){}});
+  peer.on("error",(err)=>{ console.warn("peer",err.type);
+    if(err.type==="unavailable-id") alert("Bu raqam boshqa qurilmada ochiq. Boshqa raqam ishlating yoki o'sha oynani yoping.");
   });
-  // incoming audio call
-  peer.on("call", (mc)=> onIncomingCall(mc));
+  peer.on("call",mc=>onIncomingCall(mc));
 }
-function setConn(ok){
-  const el = $("connState");
+function setConn(ok){ const el=$("connState");
   el.innerHTML = ok
-    ? '<svg viewBox="0 0 24 24" fill="none" stroke="#34e0a4" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><line x1="12" y1="20" x2="12" y2="20"/></svg>'
-    : '<svg viewBox="0 0 24 24" fill="none" stroke="#ff5d5d" stroke-width="2"><line x1="2" y1="2" x2="22" y2="22"/><path d="M5 13a10 10 0 0 1 9-3"/></svg>';
-  el.title = ok ? "Aloqa bor" : "Aloqaga ulanmoqda…";
+   ? '<svg viewBox="0 0 24 24" fill="none" stroke="#34e0a4" stroke-width="2.2"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1" fill="#34e0a4"/></svg>'
+   : '<svg viewBox="0 0 24 24" fill="none" stroke="#ff5252" stroke-width="2.2"><line x1="2" y1="2" x2="22" y2="22"/><path d="M5 13a10 10 0 0 1 9-3"/></svg>';
+  el.title = ok?"Aloqa bor":"Aloqaga ulanmoqda…";
 }
 
 // ---------- mic ----------
 async function ensureMic(){
-  if (localStream) return localStream;
-  try{
-    localStream = await navigator.mediaDevices.getUserMedia({ audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true} });
-    applyMic();
-    return localStream;
-  }catch(e){ $("micErr").textContent="Mikrofonga ruxsat berilmadi. Suhbat uchun mikrofon shart."; $("micErr").classList.remove("hide"); return null; }
+  if(localStream) return localStream;
+  try{ localStream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
+    applyMic(); return localStream;
+  }catch(e){ $("micErr").textContent="Mikrofonga ruxsat berilmadi. Gaplashish uchun ruxsat bering."; $("micErr").classList.remove("hide"); return null; }
 }
-function applyMic(){ if(!localStream) return; const on = (mode==="open") ? true : tx;
-  localStream.getAudioTracks().forEach(t=>t.enabled=on); }
+function applyMic(){ if(!localStream)return; localStream.getAudioTracks().forEach(t=>t.enabled=!muted); }
+function applyVolume(){ const v= spkMode==="ear"?0.42:1.0;
+  calls.forEach(r=>{ if(r.audioEl) r.audioEl.volume=v; }); }
 
-// ---------- HOME render ----------
+// ---------- HOME ----------
 function renderHome(){
-  $("meAv").textContent = initials(me.name); $("meAv").style.background = colorFor(me.digits);
-  $("meNm").textContent = me.name; $("mePh").textContent = disp(me.digits);
-  renderContacts();
+  $("meAv").textContent=initials(me.name); $("meAv").style.background=colorFor(me.digits);
+  $("meNm").textContent=me.name; $("mePh").textContent=disp(me.digits);
+  updateOngoing(); renderContacts();
 }
+function updateOngoing(){ $("ongoingBar").classList.toggle("hide", !room); }
+$("ongoingBar").addEventListener("click",()=>{ if(room){ show("room"); renderRoom(); } });
+
 let groupMode=false, picked=new Set();
-$("groupToggle").addEventListener("click", ()=>{
+$("grpHead").addEventListener("click",()=>{
   groupMode=!groupMode; picked.clear();
-  $("groupToggle").innerHTML = groupMode ? "✕ Bekor" : "＋ Guruh suhbati";
-  $("gbar").classList.toggle("hide", !groupMode); updateGroupBtn(); renderContacts();
+  $("grpOpen").classList.toggle("hide",!groupMode);
+  $("grpChev").textContent=groupMode?"−":"＋"; updateGroupBtn(); renderContacts();
 });
-$("groupStart").addEventListener("click", startGroup);
-function updateGroupBtn(){ $("groupStart").textContent = `Boshlash (${picked.size})`; $("groupStart").disabled = picked.size<1; }
+$("groupStart").addEventListener("click",startGroup);
+function updateGroupBtn(){ $("groupStart").textContent=`Boshlash (${picked.size})`; $("groupStart").disabled=picked.size<1; }
 
 function renderContacts(){
-  const wrap = $("contacts"); wrap.innerHTML="";
-  if (!contacts.length){ wrap.innerHTML = '<div class="empty">Hali kontakt yo\'q.<br>Yuqorida raqam kiritib qo\'shing.</div>'; return; }
+  const wrap=$("contacts"); wrap.innerHTML="";
+  $("cListHead").textContent = groupMode ? "📇 Kimni qo'shamiz? (belgilang)" : "📇 Kontaktlar";
+  if(!contacts.length){ wrap.innerHTML='<div class="empty">Hali kontakt yo\'q.<br>Yuqorida raqam kiritib ＋ ni bosing.</div>'; return; }
   contacts.forEach(c=>{
-    const sel = picked.has(c.digits);
-    const row = document.createElement("div");
-    row.className = "contact" + (sel?" sel":"");
-    const name = c.name || "Noma'lum";
-    row.innerHTML =
-      `<span class="av cav" style="background:${colorFor(c.digits)}">${initials(c.name||"?")}</span>
-       <div class="info"><div class="cn">${escapeHtml(name)}</div><div class="cp mono">${disp(c.digits)}</div></div>`;
-    if (groupMode){
+    const sel=picked.has(c.digits); const name=c.name||"Noma'lum";
+    const row=document.createElement("div"); row.className="contact"+(sel?" sel":"");
+    row.innerHTML=`<span class="av cav" style="background:${colorFor(c.digits)}">${initials(c.name||"?")}</span>
+      <div class="info"><div class="cn">${escapeHtml(name)}</div><div class="cp mono">${disp(c.digits)}</div></div>`;
+    if(groupMode){
       const p=document.createElement("span"); p.className="pick";
       p.style.cssText=`border-color:${sel?'var(--green)':'var(--line)'};background:${sel?'var(--green)':'transparent'}`;
-      p.innerHTML = sel? "✓":""; row.appendChild(p);
+      p.textContent=sel?"✓":""; row.appendChild(p);
       row.onclick=()=>{ picked.has(c.digits)?picked.delete(c.digits):picked.add(c.digits); updateGroupBtn(); renderContacts(); };
     } else {
-      const call=document.createElement("button"); call.className="cbtn"; call.innerHTML="📞";
-      call.onclick=(e)=>{ e.stopPropagation(); startDM(c); };
-      const del=document.createElement("button"); del.className="cbtn sm"; del.innerHTML="🗑";
-      del.onclick=(e)=>{ e.stopPropagation(); contacts=contacts.filter(x=>x.digits!==c.digits); saveContacts(); renderContacts(); };
-      row.appendChild(call); row.appendChild(del);
-      row.onclick=()=>startDM(c);
+      const call=document.createElement("button"); call.className="cbtn"; call.textContent="📞";
+      call.onclick=(e)=>{e.stopPropagation();startDM(c);};
+      const del=document.createElement("button"); del.className="cbtn sm"; del.textContent="🗑";
+      del.onclick=(e)=>{e.stopPropagation();contacts=contacts.filter(x=>x.digits!==c.digits);saveContacts();renderContacts();};
+      row.appendChild(call); row.appendChild(del); row.onclick=()=>startDM(c);
     }
     wrap.appendChild(row);
   });
 }
-function escapeHtml(s){ return s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m])); }
-
-// add contact
-$("addNum").addEventListener("input", e=>{ e.target.value=e.target.value.replace(/\D/g,"").slice(0,9);
-  $("addBtn").disabled = e.target.value.length<9; $("addErr").classList.add("hide"); });
-$("addNum").addEventListener("keydown", e=>{ if(e.key==="Enter" && !$("addBtn").disabled) addContact(); });
-$("addBtn").addEventListener("click", addContact);
+$("addNum").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,9);
+  $("addBtn").disabled=e.target.value.length<9; $("addErr").classList.add("hide");});
+$("addNum").addEventListener("keydown",e=>{if(e.key==="Enter"&&!$("addBtn").disabled)addContact();});
+$("addBtn").addEventListener("click",addContact);
 function addContact(){
-  const digits = "998" + $("addNum").value;
-  if (digits === me.digits){ showAddErr("Bu sizning raqamingiz."); return; }
-  if (contacts.some(c=>c.digits===digits)){ showAddErr("Bu kontakt allaqachon bor."); return; }
-  contacts.push({ digits, name:"" }); saveContacts(); $("addNum").value=""; $("addBtn").disabled=true;
-  showAddErr("Qo'shildi. Suhbat ulanganda ismi avtomatik chiqadi.","info");
-  renderContacts();
+  const digits="998"+$("addNum").value;
+  if(digits===me.digits){addErr("Bu sizning raqamingiz.");return;}
+  if(contacts.some(c=>c.digits===digits)){addErr("Bu kontakt allaqachon bor.");return;}
+  contacts.push({digits,name:""}); saveContacts(); $("addNum").value=""; $("addBtn").disabled=true;
+  addErr("Qo'shildi. Ulanganda ismi avtomatik chiqadi.","info"); renderContacts();
 }
-function showAddErr(msg, kind="info"){ const e=$("addErr"); e.textContent=msg; e.className="banner "+kind; e.classList.remove("hide"); }
-function rememberName(digits, name){
-  if(!name) return; const c=contacts.find(x=>x.digits===digits);
-  if(c && c.name!==name){ c.name=name; saveContacts(); if(!$("home").classList.contains("hide")) renderContacts(); }
-}
+function addErr(m,k="warn"){ const e=$("addErr"); e.textContent=m; e.className="banner "+k; e.classList.remove("hide"); }
+function rememberName(d,n){ if(!n)return; const c=contacts.find(x=>x.digits===d);
+  if(c&&c.name!==n){c.name=n;saveContacts(); if(!$("home").classList.contains("hide"))renderContacts();} }
 
-// ---------- CALLS ----------
+// ---------- START CALLS ----------
 function startDM(c){
-  enterRoom({ kind:"dm", id:"dm:"+[me.digits,c.digits].sort().join("_"), title:(c.name||disp(c.digits)), members:new Set([me.digits,c.digits]) });
-  connectTo(c.digits, { kind:"dm" });
+  enterRoom({kind:"dm",id:"dm:"+[me.digits,c.digits].sort().join("_"),title:(c.name||disp(c.digits)),members:new Set([me.digits,c.digits])});
+  dialTarget={digits:c.digits,name:c.name||""}; dialStart=Date.now();
+  startOutgoingRing(); tryDial();
+  dialTimer=setInterval(tryDial,3000);
+}
+function tryDial(){
+  if(!room||room.kind!=="dm"){clearInterval(dialTimer);return;}
+  if([...calls.values()].some(c=>c.stream)){ stopRing(); clearInterval(dialTimer); return; }
+  if(!calls.has(dialTarget.digits)) connectTo(dialTarget.digits,{kind:"dm"});
+  renderRoom();
 }
 function startGroup(){
-  if (picked.size<1) return;
-  const gname = $("groupName").value.trim() || "Guruh";
-  const id = "grp:"+Math.random().toString(36).slice(2,8);
-  const members = new Set([me.digits, ...picked]);
-  groupMode=false; $("groupToggle").innerHTML="＋ Guruh suhbati"; $("gbar").classList.add("hide");
-  const sel = new Set(picked); picked.clear();
-  enterRoom({ kind:"grp", id, title:gname, members });
-  // initiator calls every selected member directly (full fan-out)
-  sel.forEach(d=> connectTo(d, { kind:"grp", group:id, groupName:gname, members:[...members] }));
+  if(picked.size<1)return;
+  const gname=$("groupName").value.trim()||"Guruh";
+  const id="grp:"+Math.random().toString(36).slice(2,8);
+  const members=new Set([me.digits,...picked]); const sel=new Set(picked);
+  groupMode=false; $("grpOpen").classList.add("hide"); $("grpChev").textContent="＋"; picked.clear(); $("groupName").value="";
+  enterRoom({kind:"grp",id,title:gname,members});
+  sel.forEach(d=>connectTo(d,{kind:"grp",group:id,groupName:gname,members:[...members]}));
 }
 
-async function connectTo(digits, meta){
-  if (digits===me.digits) return;
-  if (calls.has(digits)) return;
-  const stream = await ensureMic(); if(!stream) return;
-  const mc = peer.call(digits, stream, { metadata:{ from:me.digits, name:me.name, ...meta } });
-  registerCall(digits, mc, meta.name);
+async function connectTo(digits,meta){
+  if(digits===me.digits||calls.has(digits))return;
+  const s=await ensureMic(); if(!s)return;
+  const mc=peer.call(digits,s,{metadata:{from:me.digits,name:me.name,...meta}});
+  registerCall(digits,mc,meta.name);
 }
-
 async function onIncomingCall(mc){
-  const md = mc.metadata||{}; const from = md.from || mc.peer;
-  rememberName(from, md.name);
-  // group: if already in this group room, auto-answer; build mesh
-  if (md.kind==="grp" && room && room.kind==="grp" && room.id===md.group){
-    await answerCall(mc, md); meshFromMembers(md);
-    return;
-  }
-  // if already in a call/room with this exact peer (dm) and connected, just answer extra
-  if (calls.has(from)){ try{mc.close();}catch(e){} return; }
-  // otherwise prompt
-  pendingIncoming = { mc, md, from };
-  renderIncoming();
+  const md=mc.metadata||{}; const from=md.from||mc.peer; rememberName(from,md.name);
+  if(md.kind==="grp" && room && room.kind==="grp" && room.id===md.group){ await answerCall(mc,md); meshFromMembers(md); return; }
+  if(calls.has(from)){ try{mc.close();}catch(e){} return; }
+  pendingIncoming={mc,md,from}; startIncomingRing(); renderIncoming();
 }
-
 function renderIncoming(){
   const box=$("incoming");
   if(!pendingIncoming){ box.classList.add("hide"); box.innerHTML=""; return; }
-  const {md, from} = pendingIncoming; const grp = md.kind==="grp";
-  const title = grp ? (md.groupName||"Guruh") : (md.name||disp(from));
-  const sub = grp ? ("Guruh suhbati · "+(md.name||disp(from))) : "Sizni chaqiryapti…";
-  box.innerHTML =
-    `<div class="inc"><span class="av ia" style="background:${colorFor(from)}">${grp?"👥":initials(md.name||"?")}</span>
-      <div class="it"><div class="t">${escapeHtml(title)}</div><div class="s">${escapeHtml(sub)}</div></div>
-      <button class="dec" id="decBtn">✕</button><button class="acc" id="accBtn">📞</button></div>`;
+  const {md,from}=pendingIncoming; const grp=md.kind==="grp";
+  const title=grp?(md.groupName||"Guruh"):(md.name||disp(from));
+  const sub=grp?("Guruh chaqiruvi · "+(md.name||disp(from))):"Sizni chaqiryapti…";
+  box.innerHTML=`<div class="inc"><span class="av ia" style="background:${colorFor(from)}">${grp?"👥":initials(md.name||"?")}</span>
+    <div class="it"><div class="t">${escapeHtml(title)}</div><div class="s">${escapeHtml(sub)}</div></div>
+    <button class="dec" id="decBtn">✕</button><button class="acc" id="accBtn">📞</button></div>`;
   box.classList.remove("hide");
-  $("decBtn").onclick=()=>{ try{pendingIncoming.mc.close();}catch(e){} pendingIncoming=null; renderIncoming(); };
-  $("accBtn").onclick=async ()=>{
-    const p=pendingIncoming; pendingIncoming=null; renderIncoming();
+  $("decBtn").onclick=()=>{ stopRing(); try{pendingIncoming.mc.close();}catch(e){} pendingIncoming=null; renderIncoming(); };
+  $("accBtn").onclick=async()=>{
+    stopRing(); const p=pendingIncoming; pendingIncoming=null; renderIncoming();
+    if(room) leaveRoom(true); // leave any previous call silently
     const grp=p.md.kind==="grp";
-    if (grp) enterRoom({ kind:"grp", id:p.md.group, title:p.md.groupName||"Guruh", members:new Set(p.md.members||[me.digits,p.from]) });
-    else enterRoom({ kind:"dm", id:"dm:"+[me.digits,p.from].sort().join("_"), title:(p.md.name||disp(p.from)), members:new Set([me.digits,p.from]) });
-    await answerCall(p.mc, p.md);
-    if (grp) meshFromMembers(p.md);
+    if(grp) enterRoom({kind:"grp",id:p.md.group,title:p.md.groupName||"Guruh",members:new Set(p.md.members||[me.digits,p.from])});
+    else enterRoom({kind:"dm",id:"dm:"+[me.digits,p.from].sort().join("_"),title:(p.md.name||disp(p.from)),members:new Set([me.digits,p.from])});
+    await answerCall(p.mc,p.md); if(grp) meshFromMembers(p.md);
   };
 }
-
-async function answerCall(mc, md){
-  const stream = await ensureMic(); if(!stream){ try{mc.close();}catch(e){} return; }
-  const from = md.from || mc.peer;
-  mc.answer(stream);
-  registerCall(from, mc, md.name);
+async function answerCall(mc,md){
+  const s=await ensureMic(); if(!s){try{mc.close();}catch(e){}return;}
+  const from=md.from||mc.peer; mc.answer(s); registerCall(from,mc,md.name);
 }
-
-// connect to other group members (lower-digits calls higher-digits => one link per pair)
 function meshFromMembers(md){
-  const members = md.members || (room? [...room.members] : []);
-  members.forEach(d=>{
-    if (d===me.digits) return;
-    if (calls.has(d)) return;
-    if (me.digits < d) connectTo(d, { kind:"grp", group:room.id, groupName:room.title, members });
-  });
+  const members=md.members||(room?[...room.members]:[]);
+  members.forEach(d=>{ if(d===me.digits||calls.has(d))return; if(me.digits<d) connectTo(d,{kind:"grp",group:room.id,groupName:room.title,members}); });
 }
-
-function registerCall(digits, mc, name){
-  if (calls.has(digits)){ const old=calls.get(digits); try{old.mc.close();}catch(e){} }
-  const rec = { mc, stream:null, name:name||"", audioEl:null, analyser:null };
-  calls.set(digits, rec);
-  rememberName(digits, name);
-  mc.on("stream", (rs)=>{ rec.stream=rs; attachAudio(digits, rs); renderRoom(); });
-  mc.on("close", ()=> dropCall(digits));
-  mc.on("error", ()=> dropCall(digits));
+function registerCall(digits,mc,name){
+  if(calls.has(digits)){const o=calls.get(digits);try{o.mc.close();}catch(e){}}
+  const rec={mc,stream:null,name:name||"",audioEl:null,analyser:null,speaking:false};
+  calls.set(digits,rec); rememberName(digits,name);
+  mc.on("stream",rs=>{ rec.stream=rs; stopRing(); attachAudio(digits,rs); renderRoom(); });
+  mc.on("close",()=>dropCall(digits));
+  mc.on("error",()=>dropCall(digits));
   renderRoom();
 }
 function dropCall(digits){
-  const rec=calls.get(digits); if(!rec) return;
-  if(rec.audioEl){ rec.audioEl.srcObject=null; rec.audioEl.remove(); }
-  if(rec.analyser){ clearInterval(rec.analyser.iv); try{rec.analyser.ctx.close();}catch(e){} }
+  const rec=calls.get(digits); if(!rec)return;
+  if(rec.audioEl){rec.audioEl.srcObject=null;rec.audioEl.remove();}
+  if(rec.analyser){clearInterval(rec.analyser.iv);try{rec.analyser.ctx.close();}catch(e){}}
   calls.delete(digits); renderRoom();
 }
-function attachAudio(digits, stream){
-  const rec=calls.get(digits); if(!rec) return;
-  let a=rec.audioEl; if(!a){ a=document.createElement("audio"); a.autoplay=true; a.playsInline=true; document.body.appendChild(a); rec.audioEl=a; }
-  a.srcObject=stream; a.play&&a.play().catch(()=>{});
-  // speaking meter
-  try{
-    const C=window.AudioContext||window.webkitAudioContext; const ctx=new C();
+function attachAudio(digits,stream){
+  const rec=calls.get(digits); if(!rec)return;
+  let a=rec.audioEl; if(!a){a=document.createElement("audio");a.autoplay=true;a.playsInline=true;document.body.appendChild(a);rec.audioEl=a;}
+  a.srcObject=stream; a.volume= spkMode==="ear"?0.42:1.0; a.play&&a.play().catch(()=>{});
+  try{ const C=window.AudioContext||window.webkitAudioContext; const ctx=new C();
     const src=ctx.createMediaStreamSource(stream); const an=ctx.createAnalyser(); an.fftSize=256; src.connect(an);
     const data=new Uint8Array(an.frequencyBinCount);
     const iv=setInterval(()=>{ an.getByteTimeDomainData(data); let s=0;
       for(let i=0;i<data.length;i++){const v=(data[i]-128)/128;s+=v*v;}
-      const rms=Math.sqrt(s/data.length); rec.speaking = rms>0.03; updateSpeaking(digits, rec.speaking);
-    },160);
+      const rms=Math.sqrt(s/data.length); rec.speaking=rms>0.03; updateSpeaking(digits,rec.speaking); },160);
     rec.analyser={ctx,iv};
   }catch(e){}
 }
-function updateSpeaking(digits, sp){
-  const el=document.querySelector(`[data-peer="${digits}"]`); if(!el) return;
-  el.querySelector(".orb").classList.toggle("sp", sp);
-  const ps=el.querySelector(".ps"); ps.classList.toggle("sp", sp); ps.textContent = sp? "gapiryapti" : "efirda";
-}
+function updateSpeaking(digits,sp){ const el=document.querySelector(`[data-peer="${digits}"]`); if(!el)return;
+  el.querySelector(".orb").classList.toggle("sp",sp);
+  const ps=el.querySelector(".ps"); ps.classList.toggle("sp",sp); ps.textContent=sp?"gapiryapti":"efirda"; }
 
 // ---------- ROOM ----------
 function enterRoom(r){
-  room=r; mode = r.kind==="grp" ? "open" : "ptt"; tx=false; setMode(mode, true);
-  $("roomTitle").textContent = r.title;
-  $("roomIco").innerHTML = r.kind==="grp" ? "👥" : "📻";
+  room=r; muted=false; $("muteBtn").classList.remove("act"); $("muteBtn").textContent="🎙️";
+  $("roomTitle").textContent=r.title;
+  $("roomSub").textContent=r.kind==="grp"?"guruh suhbati":"shaxsiy suhbat";
   $("micErr").classList.add("hide");
-  show("room"); renderRoom();
+  show("room"); updateOngoing(); renderRoom();
 }
 function renderRoom(){
   const conn=[...calls.values()].some(c=>c.stream);
-  $("roomPill").className = "pill " + (conn?"on":"wait");
-  $("roomPill").innerHTML = conn ? "🟢 Suhbat jonli" : (room.kind==="grp"?"⏳ Ishtirokchilar kutilmoqda…":"⏳ Suhbatdosh kutilmoqda…");
-  $("roomSub").textContent = room.kind==="grp" ? `${calls.size+1} ishtirokchi` : "shaxsiy suhbat";
-  $("pttBtn").disabled = !conn;
+  const dialing = room && room.kind==="dm" && dialTimer && !conn;
+  $("roomPill").className="pill "+(conn?"on":"wait");
+  $("roomPill").innerHTML = conn ? "🟢 Suhbat jonli"
+    : dialing ? ((Date.now()-dialStart>12000) ? "📞 Kutilmoqda… (ilovasi ochiq bo'lsa ulanadi)" : "📞 Chaqirilmoqda…")
+    : (room && room.kind==="grp" ? "⏳ Ishtirokchilar kutilmoqda…" : "⏳ Suhbatdosh kutilmoqda…");
+  if(room) $("roomSub").textContent = room.kind==="grp"?`${calls.size+1} ishtirokchi`:"shaxsiy suhbat";
   const peers=$("peers"); peers.innerHTML="";
-  if (calls.size===0){
-    peers.innerHTML = `<div class="empty" style="width:100%">${room.kind==="grp"
-      ? "Tanlangan kontaktlar chaqiruvni qabul qilsa, shu yerda paydo bo'ladi."
-      : "Suhbatdosh ilovani ochib chaqiruvni qabul qilishi kerak."}</div>`;
-  }
-  calls.forEach((rec, digits)=>{
-    const nm = rec.name || (contacts.find(c=>c.digits===digits)?.name) || disp(digits);
-    const div=document.createElement("div"); div.className="peerc"; div.dataset.peer=digits;
-    div.innerHTML = `<div class="orb ${rec.stream?'live':''}"><span class="ring"></span>
-        <span class="av oav" style="background:${colorFor(digits)}">${initials(nm)}</span></div>
-      <div class="pn">${escapeHtml(nm)}</div>
-      <div class="ps">${rec.stream?"efirda":"ulanmoqda…"}</div>`;
-    peers.appendChild(div);
+  if(calls.size===0){ peers.innerHTML=`<div class="empty" style="width:100%">${room&&room.kind==="grp"
+    ?"Tanlanganlar qabul qilsa shu yerda chiqadi.":"Suhbatdosh chaqiruvni qabul qilishi kerak."}</div>`; }
+  calls.forEach((rec,digits)=>{
+    const nm=rec.name||(contacts.find(c=>c.digits===digits)?.name)||disp(digits);
+    const d=document.createElement("div"); d.className="peerc"; d.dataset.peer=digits;
+    d.innerHTML=`<div class="orb ${rec.stream?'live':''}"><span class="ring"></span>
+      <span class="av oav" style="background:${colorFor(digits)}">${initials(nm)}</span></div>
+      <div class="pn">${escapeHtml(nm)}</div><div class="ps">${rec.stream?"efirda":"ulanmoqda…"}</div>`;
+    peers.appendChild(d);
   });
-  $("hint").textContent = !conn ? "Ishtirokchi ulangach faollashadi."
-    : mode==="ptt" ? "Aloqa uzluksiz · mikrofon faqat bosganda yoqiladi · hamma sizni eshitadi."
-    : "Hamma mikrofoni ochiq — bir vaqtda erkin suhbat.";
+  $("hint").textContent = conn ? "Oddiy qo'ng'iroq kabi erkin gaplashing." : "Ulangach ovoz eshitiladi.";
 }
-function flashRoom(msg){ if($("room").classList.contains("hide")) return; $("roomPill").className="pill wait"; $("roomPill").textContent="⏳ "+msg; }
+// back = minimize (call continues)
+$("backBtn").innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>';
+$("backBtn").addEventListener("click",minimizeRoom);
+function minimizeRoom(){ stopRing(); show("home"); updateOngoing(); renderContacts(); }
+// swipe down on room header to minimize
+let touchY=null;
+$("roomHd").addEventListener("touchstart",e=>{touchY=e.touches[0].clientY;},{passive:true});
+$("roomHd").addEventListener("touchend",e=>{ if(touchY!=null && e.changedTouches[0].clientY-touchY>60) minimizeRoom(); touchY=null; },{passive:true});
 
-$("leaveBtn").innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34A19.79 19.79 0 0 1 3.07 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 10"/><line x1="23" y1="1" x2="1" y2="23"/></svg>';
-$("leaveBtn").addEventListener("click", leaveRoom);
-function leaveRoom(){
-  calls.forEach((rec)=>{ try{rec.mc.close();}catch(e){} if(rec.audioEl)rec.audioEl.remove(); if(rec.analyser){clearInterval(rec.analyser.iv);} });
+// end = hang up
+$("endBig").addEventListener("click",()=>leaveRoom(false));
+function leaveRoom(silent){
+  stopRing(); clearInterval(dialTimer); dialTimer=null; dialTarget=null;
+  calls.forEach(rec=>{try{rec.mc.close();}catch(e){} if(rec.audioEl)rec.audioEl.remove(); if(rec.analyser)clearInterval(rec.analyser.iv);});
   calls.clear();
-  if (localStream){ localStream.getTracks().forEach(t=>t.stop()); localStream=null; }
-  room=null; tx=false; show("home"); renderContacts();
+  if(localStream){localStream.getTracks().forEach(t=>t.stop());localStream=null;}
+  room=null; updateOngoing();
+  if(!silent){ show("home"); renderContacts(); }
 }
 
-// ---------- modes / PTT ----------
-$("modePtt").addEventListener("click", ()=> setMode("ptt"));
-$("modeOpen").addEventListener("click", ()=> setMode("open"));
-function setMode(m, silent){
-  mode=m; tx=false;
-  $("modePtt").classList.toggle("on", m==="ptt"); $("modeOpen").classList.toggle("on", m==="open");
-  const btn=$("pttBtn");
-  if (m==="open"){ btn.classList.remove("tx"); btn.classList.add("open"); $("pttLabel").textContent="🎧 Ochiq liniya — erkin gapiring"; }
-  else { btn.classList.remove("open"); $("pttLabel").textContent="🎙️ Bosib turib gapiring"; }
-  applyMic(); if(!silent) renderRoom();
-}
-const pttDown=()=>{ if(mode==="open"||$("pttBtn").disabled) return; tx=true; applyMic(); beep(true);
-  $("pttBtn").classList.add("tx"); $("pttLabel").innerHTML='<span class="barz"><i style="height:8px"></i><i style="height:18px"></i><i style="height:11px"></i><i style="height:20px"></i><i style="height:9px"></i></span> EFIRDA…'; };
-const pttUp=()=>{ if(mode==="open"||!tx) return; tx=false; applyMic(); beep(false);
-  $("pttBtn").classList.remove("tx"); $("pttLabel").textContent="🎙️ Bosib turib gapiring"; };
-$("pttBtn").addEventListener("mousedown", pttDown);
-$("pttBtn").addEventListener("mouseup", pttUp);
-$("pttBtn").addEventListener("mouseleave", ()=> tx&&pttUp());
-$("pttBtn").addEventListener("touchstart", e=>{ e.preventDefault(); pttDown(); }, {passive:false});
-$("pttBtn").addEventListener("touchend", e=>{ e.preventDefault(); pttUp(); }, {passive:false});
+// ---------- speaker / ear / mute ----------
+$("spkSpeaker").addEventListener("click",()=>setSpk("speaker"));
+$("spkEar").addEventListener("click",()=>setSpk("ear"));
+function setSpk(m){ spkMode=m; $("spkSpeaker").classList.toggle("on",m==="speaker"); $("spkEar").classList.toggle("on",m==="ear"); applyVolume(); }
+$("muteBtn").addEventListener("click",()=>{ muted=!muted; applyMic();
+  $("muteBtn").classList.toggle("act",muted); $("muteBtn").textContent=muted?"🔇":"🎙️"; });
 
 // ---------- PWA install ----------
-let deferredPrompt=null;
-window.addEventListener("beforeinstallprompt", e=>{ e.preventDefault(); deferredPrompt=e; $("installbar").classList.remove("hide"); });
-$("installBtn").addEventListener("click", async ()=>{ if(!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; $("installbar").classList.add("hide"); });
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
+let deferred=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e;$("installbar").classList.remove("hide");});
+$("installBtn").addEventListener("click",async()=>{if(!deferred)return;deferred.prompt();await deferred.userChoice;deferred=null;$("installbar").classList.add("hide");});
+if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});
 
 // ---------- boot ----------
 load();
-if (me && me.digits){ initPeer(); renderHome(); show("home"); }
-else show("register");
+if(me&&me.digits){ initPeer(); renderHome(); show("home"); } else show("register");
 </script>
 </body>
 </html>
