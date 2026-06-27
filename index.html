@@ -426,6 +426,21 @@ let touchY=null;
 $("roomHd").addEventListener("touchstart",e=>{touchY=e.touches[0].clientY;},{passive:true});
 $("roomHd").addEventListener("touchend",e=>{if(touchY!=null&&e.changedTouches[0].clientY-touchY>60)minimizeRoom();touchY=null;},{passive:true});
 
+// ---------- universal swipe (chap/o'ng) -> asosiy menyu ----------
+function goHome(){
+  if(groupMode){ groupMode=false; $("grpOpen").classList.add("hide"); $("grpChev").textContent="＋"; picked.clear(); }
+  if(room && !$("roomHd").classList.contains("hide")){ minimizeRoom(); }
+  else { show("home"); }
+  updateOngoing(); renderContacts();
+}
+let gX=null,gY=null;
+const frameEl=document.querySelector(".frame");
+frameEl.addEventListener("touchstart",e=>{const t=e.touches[0];gX=t.clientX;gY=t.clientY;},{passive:true});
+frameEl.addEventListener("touchend",e=>{
+  if(gX==null)return; const t=e.changedTouches[0]; const dx=t.clientX-gX, dy=t.clientY-gY; gX=gY=null;
+  if(Math.abs(dx)>70 && Math.abs(dx)>1.7*Math.abs(dy)){ if($("reg").classList.contains("hide")) goHome(); }
+},{passive:true});
+
 $("endBig").addEventListener("click",()=>leaveRoom(false));
 function leaveRoom(silent){stopRing();clearInterval(dialTimer);dialTimer=null;dialTarget=null;
   calls.forEach(rec=>{try{rec.mc.close();}catch(e){}if(rec.audioEl)rec.audioEl.remove();if(rec.analyser)clearInterval(rec.analyser.iv);});calls.clear();
